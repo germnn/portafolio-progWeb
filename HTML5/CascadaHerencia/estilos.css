@@ -1,0 +1,64 @@
+/*
+Especifidad: Establece como de especifico
+es un selector para saber que estilo aplicar.
+---------
+    Etiquetas y pseudoelementos         -> 001
+    Clases, pseudoclases y atributos    -> 010
+    IDs                                 -> 100
+    Estilos en linea                    -> 1000
+    !important        -> le gana a todos amosay
+---------
+!important -> especifidad -> cascada
+*/
+
+
+
+h1{
+    background-color: red;
+}
+
+.title{ /*El puntito indica que es una clase*/
+    background-color: green;
+}
+
+#title{ /*# Selector de id*/
+    background-color: blue;
+}
+
+h1 span {
+    color:red;
+}
+
+h1.title{
+    background-color: green;
+}
+
+h1#title{
+    background-color: orange;
+}
+
+p {
+    color: blue;
+}
+
+h1 {
+    color: lightcyan;  
+
+}
+
+a{
+    color: inherit;/*hereda la propiedad del padre*/
+}
+
+span{
+    color: initial; /*Ignora la herencia del padre, se queda con el
+    por defecto de la etiqueta*/
+}
+
+/*
+recomendable solo usar el de "." para no meternos a 
+especifidad*/
+
+
+
+

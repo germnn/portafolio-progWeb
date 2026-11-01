@@ -1,0 +1,78 @@
+
+/*
+    Pseudoclsese estructurales
+
+    Permites eleccionar elementos segun el lugar que ocupan
+    dentro de un contenedor.
+
+    :empty -> Se aplica a elementos vacios
+    CHILD
+        :first-child -> Primer hijo
+        :last-child -> ultimo hijo
+        :nth-child -> selecciona al hijo n
+        :nth-last-child -> selecciona al hijo n contando desde el ultimo
+        :only-child -> selecciona al hijo unico
+        
+        -Valores::after
+            odd -> impares
+            even -> pares
+            numeros enteros -> 1,2,3,...
+            ecuaciones -> 1n, 2n, ...
+
+        - type:
+            :first-of-type
+            :last-of-type
+            :nth-of-type
+            :nth-last-of-type
+            :only-of-type
+*/
+
+p{
+    background-color: lightcoral;
+    padding: 3px;
+}
+
+p:first-child{
+    background-color: aquamarine;
+}
+
+p:last-child{
+    background-color: blue;
+}
+
+p:empty{
+    background: red;
+}
+
+p:nth-child(4){
+    background-color: chartreuse;
+}
+
+p:nth-child(odd){ /*Impares*/
+    background-color: red;
+}
+
+p:nth-child(even){ /*Pares*/
+    background-color: blue;
+}
+
+p:nth-child(3n){
+    background-color: green;
+}
+
+p:nth-last-child(4){
+    background-color: brown;
+}
+
+
+/*  Tipos   */
+p:nth-child(1){/*El <p> es el primer hijo del contenedor?*/
+    background-color: darkcyan;
+}
+
+p:nth-of-type(1){
+    /*Cual es el primer elemento que sea de tipo <p>?*/
+    background-color: yellow;
+}
+
+

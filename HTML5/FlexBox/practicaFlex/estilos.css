@@ -1,0 +1,63 @@
+:root{
+    --azul: #d9eafa;
+    --morado: #e6ebff;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+header{
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid;
+    padding: 10px 30px;
+}
+
+h1, ul{
+    margin: 0;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.bienvenida{
+    height: 170px;
+    background-color: var(--azul);
+    display: flex; /*en este caso es mas facil con textAlign: center*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    padding: 20px;
+}
+
+.tarjeta{
+    background-color: var(--morado);
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.tarjeta a{
+    align-self: flex-end;
+    text-decoration: none;
+    color: blueviolet;
+}
+
+footer{
+    background-color: var(--azul);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+

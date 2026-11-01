@@ -1,0 +1,146 @@
+:root {
+  --verde: #526b63;
+  --verde-claro: #edf3ee;
+  --morado: #7666a8;
+  --morado-claro: #f1eef8;
+  --naranja: #d9965b;
+  --naranja-claro: #faf0e5;
+  --crema: #faf9f5;
+  --texto: #1f3032;
+  --blanco: #ffffff;
+}
+
+body{
+  margin: 0;
+}
+
+header{
+  background-color: var(--verde);
+
+}
+
+header h1{
+  text-align: center;
+  color: white;
+  margin: 0; /*lo pega arriba*/
+}
+header h4{
+  text-align: center;
+  color: white;
+  font-size: small;
+  margin: 0;
+}
+
+.sectionArriba{
+  background-color: var(--crema); /*crema???*/
+  text-align: center;
+}
+
+.izquierda{
+  color: var(--texto);
+  display: inline-block;
+  vertical-align: middle;
+  width: 44%;
+  padding: 50px 25px;
+  text-align: left;
+}
+
+.izquierda h3{
+  color: var(--verde);
+}
+
+.izquierda h1{
+  margin-top: -7px;
+}
+
+.izquierda p{
+  margin-top: -13px;
+  margin-bottom: 23px;
+  font-size: large;
+}
+
+.izquierda a{
+  color: var(--blanco);
+  background-color: #526b63;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 9px 18px;
+  border-radius: 5px;
+}
+
+.derecha{
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.derecha img{
+  width: 60%;
+  height: 60%;
+  border-radius: 7px;
+  text-align: center;
+  margin: 30px 0 30px;
+}
+
+.sectionAbajo{
+  text-align: center;
+}
+
+.sectionAbajo h4{
+  text-align: left;
+  color: var(--verde);
+  margin: 30px 0 0 30px;
+}
+
+.sectionAbajo h2{
+  text-align: left;
+  color: var(--texto);
+  margin: 5px 0 15px 30px;
+}
+
+.tarjeta{
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    display: inline-block;
+    width: 28%;
+    margin: 0 10px 30px; 
+}
+
+.iconoRedondo{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.verde-claro {
+  background-color: var(--verde-claro);
+}
+
+.verde{
+  background-color: var(--verde);
+}
+
+.morado-claro{
+  background-color: var(--morado-claro);
+}
+
+.morado{
+  background-color: var(--morado);
+}
+
+.naranja-claro{
+  background-color: var(--naranja-claro);
+}
+
+.naranja{
+  background-color: var(--naranja);
+}
+
+footer{
+  background-color: var(--verde);
+  color: var(--blanco);
+  text-align: center;
+  padding: 15px;
+}

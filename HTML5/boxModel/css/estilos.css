@@ -1,0 +1,48 @@
+h1{
+    background-color: aqua;
+    width: 150px;
+    height: 150px;
+    display: inline-block; /*Lo hace en linea pero el block permite modificar altura y eso*/
+    margin: 20px 30px; /*Arriba, Abajo*/
+    /*margin: 20px; Todos los lados*/
+    /*margin-right: 40px;*/
+    /*margin: 20px 30px 50px; Arriba, Lados, Abajo*/
+    /*margin: 20px 30px 50px 15px; Arriba, Derecha, Abajo, Izquierad*/ 
+    vertical-align: top;
+}
+
+h2{
+    background-color: orange;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+
+span{
+    background-color: blueviolet;
+   /* height: 300px;*/
+    width: 70%;
+    display: inline-block;
+    padding: 30px 20px 10px 25px; /*Parece ser igual que el margin*/
+    border: 10px solid black;
+    border-width: 5px;
+    border-style: dotted;
+    border-color: blanchedalmond;
+    border-left-width: 30px;
+    border-top-style: solid;
+    border-top-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

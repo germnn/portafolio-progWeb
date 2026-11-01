@@ -1,0 +1,48 @@
+
+div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, minmax(100px,200px));
+    min-height: 100vh; /*viewport(del navegador no se q) height*/
+    grid-template-areas: 
+        "header header header header"
+        "main main . aside"
+        "footer footer footer footer"
+    ;
+}
+
+header{
+    background-color: green;
+    /*grid-column: 1 / 4;
+    grid-row: 1/2;
+        rowS, colS, rowE, colE
+    */
+   /* grid-area: 1/1/2/-1;*/
+   grid-area: header;
+}
+
+main{
+    background-color: red;
+    /*grid-area: 2/1/3/3;*/
+    grid-area: main;
+}
+
+aside{
+    background-color: orange;
+    /*grid-area: 2 / 4 / 3 / -1;*/
+    grid-area: aside;
+}
+
+footer{
+    background-color: blue;
+    /*grid-area: 3/1/4/-1;*/
+    grid-area: footer;
+}
+
+/*
+    Grid-template-areas: define una plantilla de gird haciendo referencia a los nombres de las areas, especificadas con la propiedad grid-area.
+        repetir el nombre de un del grid hace que el contenido abarque esas celdads.
+        un punto indica una celda vacia
+    Grid-area: Asigna un nombre a un elemento para que pueda ser referecniado por una plantilla creada con la propiedad grid-template-areas
+                Valores: <name>    
+*/

@@ -1,0 +1,96 @@
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.encabezado{
+    padding: 7px;
+    color: blue;
+    border-top: 2px green solid;
+}
+
+h2{
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+}
+
+.navHeader{
+    display: inline-block;
+    text-align: right;
+    width: 49%;
+}
+
+nav ul{
+    margin: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    padding-right: 4px;
+}
+
+.divInfoEnc{
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/**/
+
+.seccionInfo{
+    padding-left: 10px;
+    border-bottom: 1px gray solid;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 20px;
+}
+
+.cuadroIzq{
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    width: 90%;
+    margin: 10px;
+    padding-left: 14px;
+    padding-bottom: 30px;
+    height: 92%;
+}
+
+/*.listaAzul{
+    display: flex;
+    list-style: none;
+}*/
+
+.cuadroDer{
+    /*display: flex;*/
+    display: inline-block;
+    width: 90%;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.cuadroInfo{
+    display: inline-block;
+    background-color: blanchedalmond;
+    border: 1px gray solid;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+footer{
+    text-align: center;
+    margin: 30px;
+}
+
+.botonVerde{
+    background-color: greenyellow;
+    padding: 12px ;
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+}

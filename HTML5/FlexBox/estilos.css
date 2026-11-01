@@ -1,0 +1,82 @@
+.flex-item{
+    width: 150px;
+    height: 40px;
+    background-color: palevioletred;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+}
+
+.flex-container{
+    height: 800px;
+    border: 20px solid;
+    background-color: lightblue;
+    display: flex;
+    /*flex-direction: row; /*row, row-reverse, column, column-reverse
+    flex-wrap: wrap;*/
+    /*nowrap: en la misma linea
+    wrap: los que caben en el mismo sentido/linea
+    wrap-reverse: de abajo pa arriba
+    Puede desbordarse del container en caso de muchos items*/
+    flex-flow: row nowrap;
+    gap: 10px; /*arriba abajo*/
+    padding: 5px;
+    justify-content: flex-start; /*acomoda los item en base al eje principal que este en flex-flow*/
+    /*align-items: center; no funciona cuando hay mas de una linea*/
+    align-content: space-between;
+}
+
+.flex-item:nth-child(2){
+    align-self: center;
+}
+
+/*
+.flex-item:nth-child(1){
+    order: 2;
+}
+
+.flex-item:nth-child(2){
+    order: 1;
+}
+
+.flex-item:nth-child(3){
+    order: 3;
+}*/
+
+
+/*Flex-flow: combinacion de flex-direction + flex-wrap
+flex-flow: <flex-direction> <flex-wrap>*/
+
+/*
+GAP: separacion entre flex-items sin agregar margenes a cada elementos 
+(reemplaza al margin)
+
+- Order: permite cambiar el roden visuakl del os flex-items
+
+- Alineamiento
+eje principal 
+    justify-content
+eje secundario 
+    align-items (una sola linea)
+    aling-content (mas de una linea)
+    aling-self(flex-item)
+
+- Justify-contentL define la alineacion a lo largo del eje principal
+flex-start (default)
+flex-end
+center
+space-between
+space-around
+space-evenly
+
+- Align-items: define el comportamiento de los flex-items a lo largo del
+eje secundario de la linea actual
+flex-start
+flex-end
+stretch (default ) (estirado)
+center
+baseline (se alinean los textos sin importar el tamanio a esa linea)
+
+-Align-self: pone la propiedad en un item individual
+
+*/

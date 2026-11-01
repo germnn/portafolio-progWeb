@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+ 
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        width: 70%;
+        margin: 0 auto;
+      }
+      .aprobado {
+        color: rgb(50, 167, 50);
+      }
+      .reprobado {
+        color: crimson;
+      }
+      .seccion {
+        margin-top: 15px;
+      }
+      input {
+        width: 100%;
+        display: block;
+        margin: 5px 0;
+        padding: 5px;
+      }
+      button {
+        width: 100%;
+        padding: 10px 20px;
+        margin: 10px 0;
+        cursor: pointer;
+        background-color: rgb(35, 78, 120);
+        border-radius: 5px;
+        font-weight: bold;
+        border: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="titulo">Lista</h1>
+ 
+    <div class="seccion">
+      <input type="text" id="nombre" placeholder="Nombre del alumno" />
+      <input type="number" id="calificacion" placeholder="Calificación" />
+      <input type="number" id="edad" placeholder="Edad" />
+      <button id="agregar">Agregar alumno</button>
+    </div>
+ 
+    <h3>Todos los alumnos</h3>
+    <ul id="listaAlumnos" class="lista"></ul>
+ 
+    <div class="seccion">
+      <button id="mostrarAprobados">Mostrar aprobados</button>
+    </div>
+ 
+    <div id="contenedorAprobados" class="seccion"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

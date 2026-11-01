@@ -1,0 +1,117 @@
+/*
+    Pseudoelementos
+
+    Dar estilos a partes especificas de un elemento.
+
+    ::first-letter -> ELementos en bloque
+    ::first-line   -> ELementos en bloque
+    ::after         
+    ::before
+    ::selection
+*/
+.titulo{
+    color: crimson;
+}
+
+.titulo::first-letter{
+    color: orange;
+    font-size: 40px;
+    font-family: cursive;
+
+}
+
+.texto::first-line{
+    color: green;
+}
+
+.linea{
+    display: block; /*Porque el span es en linea*/
+}
+
+.linea::first-letter{
+    color: salmon;
+}
+
+.texto span{
+    font-weight: bold
+}
+
+.dinero::before{
+    content: '$';
+}
+
+
+.dinero::after{
+    content: '.00';
+}
+
+.ejemplo::before, .ejemplo::after{
+    content: '';
+    display: block; /* inline*/
+    width: 10px;
+    height: 10px;
+    background-color: black;
+}
+
+.texto::selection{
+    color: aliceblue;
+    background-color: cadetblue;
+}
+
+/*
+    Pseudoclases - DInamicas
+    :link   -> enlaces no visitados
+    :visited (a) -> enlaces visitados
+    :active (a) -> al momento del click
+    :hover -> Al poner el cursor encima
+    :focus -> El elemento tiene el foco
+*/
+
+.enlace:link{
+    color: orange
+}
+
+.enlace:visited{
+    color: salmon;
+}
+
+.enlace:active{
+    color: lightblue;
+    background-color: cyan;
+
+}
+
+.boton{
+    display: block;
+    border: 2px solid black;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: cadetblue;
+    padding: 3px 0;
+
+}
+
+.boton:hover{
+    color: cadetblue;
+    background-color: white;
+    border-color: cadetblue;
+    text-transform: scale(.9);
+}
+
+.input:focus{
+    background-color: orange;
+    
+}
+
+
+
+
+
+
+
+
+

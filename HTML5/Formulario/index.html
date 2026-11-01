@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="#" method="post"> <!---->
+        <fieldset> <!--Permite envolver cosas-->
+            <legend>Datos personales</legend>
+        <h3>Texto</h3>
+        <label for="nombre">Nombre:</label>
+        <input 
+            type="text"
+            id="nombre"
+            name="nombre" 
+            value=""
+            placeholder="Ingresar nombre"
+            maxlength="100"
+
+        >
+        <!--Dentro de input: readonly disabled size-->
+        <h3>Radio</h3>
+        <h5>Color favorito:</h5>
+        <input id="azul" type="radio" name="color" value="azul" >
+        <label for="azul">Azul</label>
+
+        <input id="verde" type="radio" name="color" value="verde" checked>
+        <label for="verde">Verde</label>
+
+        <input id="rojo" type="radio" name="color" value="rojo">
+        <label for="rojo">Rojo</label>
+
+        <h3>Select</h3>
+        <label for="frutas">Frutas:</label>
+        <select name="fruta" id="frutas">
+            <optgroup label="Principales"> <!--Agrupa opciones (Categorias)-->
+                <option value="fresa">Fresa</option>
+                <option value="uva">Uva</option>
+            </optgroup>
+            <optgroup label="otras">
+                <option value="manzana">Manzana</option>
+            </optgroup>
+        </select>
+
+        <h3>TextArea</h3>
+        <textarea 
+            name="mensaje" 
+            id="msj"
+            rows="10"
+            cols="20"
+            style=" resize: none;" 
+        >  
+        </textarea> <!--el style es valido pero no se recomienda, mala practi-->
+        </fieldset>
+
+        <h3>Datalist</h3>
+        <label>Buscador</label>
+        <input list="buscador">
+        <datalist id="buscador">
+            <option value="Internet Explorer"></option>
+            <option value="Firefox"></option>
+            <option value="Safari"></option>
+            <option value="Opera"></option>
+            <option value=""></option>
+            <option value=""></option>
+        </datalist>
+
+        <h3>Password</h3>
+        <label>Contraseña</label>
+        <input type="password" name="pass" required>
+        
+        <h3>Checkbox</h3>
+        <input id="auto" type="checkbox" name="vehiculo1" value="auto">
+        <label for="auto">Tegno un auto</label>
+        <input id="auto" type="checkbox" name="vehiculo2" value="moto">
+        <label for="moto">Tegno una moto</label>
+        <hr>
+        <br>
+        
+        <h3>Color</h3>
+        <label for="color">Color</label>
+        <input id="color" type="color" name="color">
+        <hr>
+
+        <h3>Fecha</h3>
+        <label>Fecha:</label>
+        <input type="date" min="2000-01-01">
+
+        <h3>Datetime</h3>
+        <label>Datetime:</label>
+        <input type="datetime-local" name="fecha">
+
+        <h3>Email</h3>
+        <input type="email" name="email" autocomplete="on">
+        
+        <h3>Number</h3>
+        <input type="number" name="cantidad" min="1" max="10" step="3">
+
+        <h3>Range</h3>
+        <input type="range" min="0" max="100" step="10">
+
+        <h3>Search</h3>
+        <input type="search" name="busqueda">
+
+        <h3>Time</h3>
+        <input type="time" name="tiempo">
+
+        <h3>URL</h3>
+        <input type="url" name="url"> <!--Tiene validacion-->
+
+        <h3>Week</h3>
+        <input type="week" name="week">
+
+        <h3>File</h3>
+        <input type="file" name="archivo" multiple>
+
+
+
+        <hr>
+        <input type="submit" value="Guardar">
+        <br>
+        <input type="button" value="input type button">
+        <br>
+        <button type="submit">Button type submit</button>
+        <br>
+        <button type="button">Button</button>
+        <br>
+        <input type="reset" value="Limpiar cagadero">
+    </form>    
+</body>
+</html>

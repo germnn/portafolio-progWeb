@@ -1,0 +1,81 @@
+:root{
+    --color-princiapl: #2171b5;
+    --color-secundario: #deebf7;
+    --color-verde: #75975e;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    background-color: var(--color-princiapl);
+    color: #fff; 
+
+}
+
+h1{
+    display: inline-block;
+    width: 50%;
+    font-size: 24px;
+    margin: 0;
+    /*padding: 15px;*/
+}
+
+nav ul{
+    margin: 0;
+}
+
+nav{
+    display: inline-block;
+    width: 49%;
+    text-align: right;
+    vertical-align: middle;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 8px;
+
+}
+
+.seccion1{ /*porque el punto?*/
+    background-color: var(--color-secundario);
+    text-align: center;
+    padding: 50px;
+}
+
+.seccion1 button{
+    background-color: var(--color-princiapl);
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    font-weight: 600;
+}
+
+.tarjetas{
+    text-align: center;
+    padding: 50px 0;
+}
+
+.tarjeta{
+    background-color: var(--color-secundario);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    width: 28%;
+    margin: 0 10px;
+}
+
+.tarjeta a{
+    color: var(--color-verde);
+    border: 1px solid;
+    text-decoration: none;
+    padding: 3px 6px;
+}
+
+
+
+
+
