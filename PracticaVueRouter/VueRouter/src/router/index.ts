@@ -11,7 +11,7 @@ const router = createRouter({
       component: InicioView 
     },
     {
-      path: "/detalle",
+      path: "/detalle/:id",
       name: "Detalle",
       component: DetalleView
     }
