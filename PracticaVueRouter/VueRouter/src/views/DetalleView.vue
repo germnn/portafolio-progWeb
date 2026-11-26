@@ -4,36 +4,40 @@
 
     <RouterLink to="/">Regresar</RouterLink>
 
-    <div v-if="cargando">Cargando...</div>
-    <div v-if="serie"> 
-        <h2>{{ serie.name }}</h2>
-        <img :src="serie.image.original" :alt="serie.name">
+    <div v-if="store.cargando">Cargando...</div>
+    <div v-if="store.serie"> 
+        <h2>{{ store.serie.name }}</h2>
+        <img :src="store.serie.image.original" :alt="store.serie.name">
         
         <h4>Estado</h4>
-        <div>{{ serie.status }}</div>
+        <div>{{ store.serie.status }}</div>
 
         <h4>Generos</h4>
-        <div>{{ serie.genres.join(", ") }}</div>
+        <div>{{ store.serie.genres.join(", ") }}</div>
 
         <h4>Calificacion</h4>
-        <div>{{ serie.rating.average }}</div>
+        <div>{{ store.serie.rating.average }}</div>
 
     </div>
 </template>
 
 <script setup lang="ts">
-import {ref, onMounted} from "vue"
+import {onMounted} from "vue"
 import TituloPrincipal from '@/Components/TituloPrincipal.vue';
 import {useRoute} from "vue-router"
-import type { Serie } from "@/interfaces/Serie" // como es interfaz ocupa el type
+import {useSeriesStore} from "@/stores/series"
+//import type { Serie } from "@/interfaces/Serie" // como es interfaz ocupa el type
     
-const serie = ref<Serie | null>(null)
-const cargando = ref<boolean>(false);
+//const serie = ref<Serie | null>(null)
+//const cargando = ref<boolean>(false);
 
 // Acceder a los parametros de la ruta
 const route = useRoute()
+const store = useSeriesStore()
 
-async function consumirSerie(): Promise<void>{
+const id = Number(route.params.id)
+
+/*async function consumirSerie(): Promise<void>{
     cargando.value = true;
     try{
         const id = route.params.id
@@ -45,10 +49,10 @@ async function consumirSerie(): Promise<void>{
     }finally{
         cargando.value = false;
     }
-}
+}*/
 
 onMounted(() => {
-    consumirSerie();
+    store.consumirSerie(id);
 })
 
 

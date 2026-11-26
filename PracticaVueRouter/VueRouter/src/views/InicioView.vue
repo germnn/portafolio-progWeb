@@ -1,11 +1,11 @@
 <template>
     <!--<TituloPrincipal />-->
     <TituloPrincipal titulo="Series"></TituloPrincipal>
-    <button @click="consumirSeries">Cargar series</button>
-    <div v-if="cargando">Cargando....</div>
+    <!--<button @click="consumirSeries">Cargar series</button>-->
+    <div v-if="store.cargando">Cargando....</div>
     <div v-else>
         <Tarjeta 
-            v-for="s in series" 
+            v-for="s in store.series" 
             :key="s.id" 
             :serie="s">
         </Tarjeta>
@@ -14,16 +14,19 @@
 </template>
 
 <script setup lang="ts">
-    import {onMounted, ref} from "vue"
+    import {onMounted} from "vue"
     import TituloPrincipal from '@/Components/TituloPrincipal.vue';
     import Tarjeta from '@/Components/Tarjeta.vue'
-    import type {Serie} from "@/interfaces/Serie"
+    import {useSeriesStore} from "@/stores/series"    
+    //import type {Serie} from "@/interfaces/Serie"
 
-    const series = ref<Serie[]>([])
-    const cargando = ref<boolean>(false)
+    const store = useSeriesStore()
+
+    //const series = ref<Serie[]>([])
+    //const cargando = ref<boolean>(false)
 
     // GET: http://api.tvmaze/com/shows
-    async function consumirSeries() : Promise<void>{
+    /*async function consumirSeries() : Promise<void>{
         cargando.value = true;
         try{
              //fetch ayuda a hacer peticiones a una api
@@ -38,11 +41,11 @@
             cargando.value = false;
         }
        
-    }
+    }*/
 
 
     onMounted(() => {
-        consumirSeries();
+        store.consumirSeries()
     })
 
 
